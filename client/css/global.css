@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Inter:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Primary :#0D1B2A;
+    --Accent: #F5A623;
+    --Background: #F9F8F4;
+    --Text: #2D2D2D;
+    --Success: #2ECC71;
+    --Danger: #E74C3C;
+    --Pending: #F59E0B;
+    --font-headings: 'Playfair Display';
+    --font-body: 'Inter';
+}
+
+body{
+    font-family: var(--font-body), sans-serif;
+}
