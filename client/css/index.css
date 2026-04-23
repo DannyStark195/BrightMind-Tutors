@@ -313,16 +313,21 @@ section h2{
     color: rgba(45,45,45,0.9);
 }
 
+.tutors{
+    margin-bottom: 60px;
+}
 .tutors-list{
     width: 100%;
-    max-width: 100px;
+    max-width: 1000px;
+    margin: 0px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
 }
 
-.tutor-card{
-    
+.tutor-card img{
+    width: 100px;
+    height: 100px;
 }
 
 .cta-banner{

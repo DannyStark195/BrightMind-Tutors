@@ -5,7 +5,7 @@ const TUTORS = [
     subjects: ["Mathematics", "Physics"],
     qualification: "B.Sc Mathematics, University of Lagos",
     bio: "5 years teaching experience, specializes in helping students tackle exam anxiety.",
-    image: "assets/images/tutors/adaeze.jpg",
+    image: "assets/images/tutors/emeka.jpg",
     phone: "08031234567"
   },
   {
