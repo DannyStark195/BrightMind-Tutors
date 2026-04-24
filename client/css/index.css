@@ -396,8 +396,21 @@ section h2{
     color: rgba(45,45,45,0.85);
 }
 
+.testimonial-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    list-style: none;
+}
+
 .testimonial{
-    display: flex;
+    padding: 28px;
+    border-radius: 28px;
+    /* background: rgba(255,255,255,0.96); */
+    box-shadow: 0 25px 60px rgba(13,27,42,0.08);
+    border-radius: 30px;
+    padding: 8px 8px 20px;
 }
 .cta-banner{
     text-align: center;
