@@ -192,7 +192,8 @@ section h2{
     font-size: clamp(2rem, 2.5vw, 2.4rem);
     color: var(--Primary);
     font-weight: 700;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
+    padding-left: 10px;
 }
 
 .white-bg{
@@ -201,10 +202,7 @@ section h2{
     border-radius: 38px 38px 0 0;
 }
 
-.subjects-taught h2,
-.how-it-works h2{
-    padding-left: 10px;
-}
+
 
 .subjects{
     margin: 0 auto 20px;
@@ -278,7 +276,7 @@ section h2{
 }
 
 .steps{
-    margin-block: 45px;
+    margin-block-end: 45px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
@@ -318,18 +316,89 @@ section h2{
 }
 .tutors-list{
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    gap: 20px;
 }
 
-.tutor-card img{
-    width: 100px;
-    height: 100px;
+.tutor-card{
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 8px 8px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tutor-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 35px 80px rgba(13,27,42,0.12);
+}
+.tutor-card-top{
+    position: relative;
+    margin-bottom: 10px;
+}
+.tutor-img-box{
+    width: 100%;
+    height: 320px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
 }
 
+.tutor-img-box .pic-mask{
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 67%, rgba(0, 0, 0, 0.64) 100%);
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.tutor-img-box img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+.tutor-img-box:hover img{
+    transform: scale(1.1);
+}
+
+.tutor-info{
+    position: absolute;
+    bottom: 5%;
+    left: 20px;
+    color: #FFF;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.tutor-info .tutor-name{
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+.tutor-info .qualification{
+    font-size: 0.75rem;
+}
+
+.tutor-card-bottom{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.tutor-subjects{
+    color: var(--Text);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.tutor-bio{
+    font-size: 0.85rem;
+    color: rgba(45,45,45,0.85);
+}
+
+.testimonial{
+    display: flex;
+}
 .cta-banner{
     text-align: center;
     border: 1px solid rgba(13,27,42,0.08);
