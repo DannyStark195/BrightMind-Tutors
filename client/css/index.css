@@ -198,11 +198,12 @@ section h2{
 
 .white-bg{
     background-color: rgba(249,248,244,0.96);
-    padding: 40px 20px 70px;
-    border-radius: 38px 38px 0 0;
+    box-shadow: 0 25px 60px rgba(13,27,42,0.08);
 }
 
-
+.others.white-bg{
+    padding: 40px 20px 70px;
+}
 
 .subjects{
     margin: 0 auto 20px;
@@ -229,8 +230,8 @@ section h2{
 .group{
     display: flex;
     align-items: center;
-    gap: 24px;
-    padding-right: 80px;
+    gap: 50px;
+    padding-right: 50px;
     animation: spin 16s linear infinite;
 }
 
@@ -319,7 +320,7 @@ section h2{
     max-width: 1200px;
     margin: 0px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -398,25 +399,63 @@ section h2{
 
 .testimonial-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 20px;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: space-around;
     list-style: none;
+    margin-top: 30px;
+   
 }
 
 .testimonial{
-    padding: 28px;
-    border-radius: 28px;
-    /* background: rgba(255,255,255,0.96); */
-    box-shadow: 0 25px 60px rgba(13,27,42,0.08);
-    border-radius: 30px;
-    padding: 8px 8px 20px;
+    padding: 20px 25px;
+    border-radius: 55px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+}
+
+.testimonial.gold-bg{
+    background: linear-gradient(135deg, #f5d890, #f8c56c);
+    color: var(--Primary);
+}
+
+.testimonial.dark-blue-bg{
+    background-color: var(--Text);
+    color: #f4f7fb;
+}
+
+.testimonial .details{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+.details .avatar{
+    width: 60px;
+    height:60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar img{
+    width: 100%;
+    height: 100%;
+}
+.details .infos .name,
+.details .infos .desc{
+    font-size: 1.2rem;
+}
+
+.testimonial .comment{
+    line-height: 1.5;
+    letter-spacing: 1px;
 }
 .cta-banner{
     text-align: center;
     border: 1px solid rgba(13,27,42,0.08);
     max-width: 860px;
-    margin: 0 auto;
+    margin: 60px auto 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -489,6 +528,69 @@ footer{
     flex-wrap: wrap;
 }
 
+
+.dark-overlay{
+    top: 0;
+    position: fixed;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    background-color: #FFF;
+    padding: 50px 50px;
+    border-radius: 20px;
+    text-align: center;
+    /* width: 100%; */
+    max-width: 500px;
+    max-height: 100vh;
+    display: grid;
+    justify-content: space-between;
+}
+
+.form-container .logo{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-container h2{
+    margin-bottom: 10px;
+}
+.form-container input, 
+.form-container button{
+    inline-size: 90%;
+    border-radius: 15px;
+    padding: 18px 20px;
+    margin-block: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.87rem;
+    background-color: rgb(247, 247, 247);
+}
+
+.form-container input:focus-visible{
+    outline: none;
+}
+
+.form-container .bottom p{
+   color:  var(--Text);
+   font-weight: 600;
+   margin-block: 10px 5px;
+   font-size: 0.9rem;
+}
+.form-container .bottom a{
+    text-decoration: none;
+    color: currentColor;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
 @media(max-width: 1150px){
     .hero{
         grid-template-columns: 1fr;
@@ -502,6 +604,7 @@ footer{
     .steps{
         grid-template-columns: 1fr;
     }
+    
 }
 
 @media(max-width: 860px){
@@ -521,6 +624,10 @@ footer{
     }
     .footer-top{
         grid-template-columns: 1fr;
+    }
+    .form-container{
+     min-height: 100vh;
+     padding-inline: 20px;
     }
 }
 
