@@ -536,11 +536,18 @@ footer{
     width: 100%;
     background-color: rgba(0,0,0,0.3);
     z-index: 999;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
+    display: none;
+    animation: fadeIn 0.4s ease alternate;
 }
-
+.dark-overlay.fade-out{
+    animation: fadeOut 0.4s ease forwards;
+}
+.dark-overlay.active{
+    display: flex;
+}
 .form-container{
     background-color: #FFF;
     padding: 50px 50px;
@@ -549,10 +556,36 @@ footer{
     width: 100%;
     max-width: 500px;
     max-height: 100vh;
-    display: grid;
-    justify-content: space-between;
+    position: relative;
+    animation: fadeIn 0.4s ease-in-out alternate;
 }
 
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.form{
+    display: none;
+    animation: fadeIn 0.4s ease-in-out alternate;
+
+}
+.form.active{
+    display: block;
+}
 .form-container .logo{
     display: block;
     margin-bottom: 10px;
@@ -566,7 +599,7 @@ footer{
     inline-size: 90%;
     border-radius: 15px;
     padding: 18px 20px;
-    margin-block: 10px;
+    margin: 8px auto;
     border: none;
     cursor: pointer;
     font-weight: 600;
@@ -584,11 +617,38 @@ footer{
    margin-block: 10px 5px;
    font-size: 0.9rem;
 }
-.form-container .bottom a{
+.form-container .bottom:nth-child(2){
     text-decoration: none;
     color: currentColor;
     font-size: 0.95rem;
-    font-weight: 600;
+    cursor: pointer;
+    margin-block: 0;
+}
+
+.form-container button div{
+    display: flex;
+    /* display: grid; */
+    place-items: center;
+    gap: 70px;
+}
+
+.form-container button img{
+    width: 25px;
+}
+.cross-btn{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 24px;
+    height: 24px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.cross-btn i{
+    font-size: 1rem;
+    color: var(--Text);
 }
 
 @media(max-width: 1150px){
@@ -629,9 +689,10 @@ footer{
      min-height: 100vh;
      padding-inline: 20px;
      /* max-width: 700px; */
-     justify-content: center;
+     /* justify-content: center; */
     }
 }
+
 
 @media(max-width: 720px){
     .cta{
