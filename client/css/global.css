@@ -5,6 +5,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+*:focus-visible{
+    outline: none;
+}
+
 :root{
     --Primary :#0D1B2A;
     --Accent: #F5A623;

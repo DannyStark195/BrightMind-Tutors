@@ -5,7 +5,9 @@ body{
                 linear-gradient(135deg, #f9f8f4 0%, #f5d890 65%, #fdfdfd 100%);
     color: var(--Text);
 }
-
+.landing-page{
+    display: none;
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -188,7 +190,7 @@ h1{
     text-align: center;
 }
 
-section h2{
+.landing-page h2{
     font-size: clamp(2rem, 2.5vw, 2.4rem);
     color: var(--Primary);
     font-weight: 700;
@@ -607,7 +609,8 @@ footer{
     background-color: rgb(247, 247, 247);
 }
 
-.form-container input:focus-visible{
+.form-container input:focus-visible,
+.form-container button:focus-visible{
     outline: none;
 }
 
@@ -651,6 +654,15 @@ footer{
     color: var(--Text);
 }
 
+input.input-error{
+    border: 3px solid var(--Danger);
+}
+.error-msg{
+    display: block;
+    color: var(--Danger);
+    font-size: 0.87rem;
+    margin-block: 3px;
+}
 @media(max-width: 1150px){
     .hero{
         grid-template-columns: 1fr;
