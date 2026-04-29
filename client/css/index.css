@@ -6,39 +6,10 @@ body{
     color: var(--Text);
 }
 .landing-page{
-    display: none;
-}
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 30px 20px;
-    padding-inline: 15px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: rgba(255,255,255,0.88);
-    backdrop-filter: blur(14px);
-    box-shadow: 0 22px 60px rgba(0,0,0,0.08);
+    /* display: none; */
 }
 
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
 
-.logo img{
-    width: 42px;
-    height: 42px;
-}
-
-.logo p{
-    color: var(--Primary);
-    font-size: 1.35rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-}
 
 .hero{
     display: grid;
@@ -55,7 +26,7 @@ h1{
     font-weight: 700;
     letter-spacing: -0.04em;
     max-width: 700px;
-    text-shadow: 0 12px 35px rgba(13, 27, 42, 0.08);
+    /* text-shadow: 0 12px 35px rgba(13, 27, 42, 0.08); */
 }
 
 .hero-main p{
@@ -95,7 +66,7 @@ h1{
 
 .hero-img img{
     width: 100%;
-    max-width: 700px;
+    max-width: 1100px;
     height: auto;
     display: block;
     border-radius: 28px;
@@ -638,7 +609,7 @@ footer{
 .form-container button img{
     width: 25px;
 }
-.cross-btn{
+.cross-btn.cancel-form-popup{
     position: absolute;
     top: 15px;
     left: 15px;
@@ -680,10 +651,6 @@ input.input-error{
 }
 
 @media(max-width: 860px){
-    header{
-        flex-wrap: wrap;
-        gap: 18px;
-    }
     .hero{
         gap: 24px;
     }
@@ -726,9 +693,6 @@ input.input-error{
 }
 
 @media(max-width: 560px){
-    header{
-        padding: 24px 16px 16px;
-    }
     h1{
         font-size: 2.6rem;
     }

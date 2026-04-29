@@ -1,0 +1,30 @@
+.pricing-page{
+    display: none;
+}
+.pricing-hero{
+    margin-block: 20px;
+    text-align: center;
+}
+.pricing-hero h2{
+    font-size: clamp(2.7rem, 2.7vw, 2.7rem);
+    font-weight: 700;
+}
+
+
+.pricing-hero p{
+    inline-size: 50%;
+    margin: 0 auto;
+}
+
+.price-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.price-card{
+    border-radius: 28px;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 20px 55px rgba(13, 27, 42, 0.08);
+    /* text-align: center; */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}

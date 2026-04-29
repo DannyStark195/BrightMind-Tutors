@@ -6,21 +6,29 @@
     <title>BrightMind Tutors</title>
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/pricing.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/tutor-logo.svg">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="./assets/icons/tutor-logo.svg" alt="BrightMind logo">
-            <p>BrightMind Tutors</p>
-        </div>
+    <header class="header">
+            <div class="logo">
+                <img src="./assets/icons/tutor-logo.svg" alt="BrightMind logo">
+                <p>BrightMind Tutors</p>
+            </div>
 
-        <nav class="navbar">
-            <button class="gold signup-popup"><div></div>Get Started</button>
-            <button class="login-popup"><div></div>Log In</button>
-        </nav>
+            <nav class="navbar">
+                <div class="cross-btn cancel-menu-popup">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <button class="gold signup-popup phone-active"><div></div>Get Started</button>
+                <button class="login-popup phone-active"><div></div>Log In</button>
+            </nav>
+
+            <div class="nav-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+            </div>
     </header>
 
     <main>
@@ -387,7 +395,7 @@
         </div>
         
         <div class="pricing-page">
-            <section>
+            <section class="pricing-hero">
                 <h2>Choose Your Plan</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, veritatis.</p>
             </section>
