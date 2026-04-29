@@ -57,26 +57,14 @@
     display: none;
 }
 
-/* .navbar button div{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--Accent);
-    border-radius: 30px;
-    left: 0;
-    color: #fff;
-    z-index: 1;
-    transform: scaleY(0);
-    transform-origin: bottom;
-    transition: all 0.2s ease-in-out;
-} */
-
-/* .navbar button:hover .navbar button div{
-            display: block;
-            transform: scaleY(1);    
-} */
+.cross-btn.close-nav-btn{
+    display: none;
+}
 
 
+.more-links{
+    display: none;
+}
 
 @media(max-width: 860px){
     .header{
@@ -96,27 +84,91 @@
         font-size: 1rem;
     }
     .navbar{
-        /* display: none; */
         position: fixed;
         top: 0px;
-        right: 0;
+        right: -100%;
         width: 55%;
         background: rgba(255,255,255,0.99);
         min-height: 100vh;
         flex-direction: column;
-        padding-top: 50px;
+        padding-top: 20px;
         padding-inline: 15px;
         text-align: start;
         gap: 20px;
+        /* animation: slideIn 0.3s; */
+        transition: all 0.2s ease;
     }
 
+    .navbar.active{
+        right: 0;
+    }
+    /* @keyframes slideIn{
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(0);
+        } */
+    /* } */
+    
     .navbar button.phone-active{
         background-color: rgb(239, 239, 239);
+    }
+    .navbar button.gold{
+        background: linear-gradient(135deg, #f5d890, #f8c56c);
+        color: #FFF;
     }
     .nav-btn{
         display: block;
     }
+    .cross-btn.close-nav-btn{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .cross-btn.close-nav-btn i{
+        color: #FFF;
+        background: linear-gradient(135deg, #f5d890, #f8c56c);
+        padding: 10px 18px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .more-links.active{
+        display: block;
+        margin-top: 20px;
+        border-top: 1px solid rgb(239, 239, 239);
+    }
+    .more-links button{
+        font-weight: 500;
+    }
+    .call-container{
+        padding: 15px 20px;
+        color: #000;
+        font-size: 0.93rem;
+    }
+    .call-btn{
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+        gap: 8px;
+        margin-top: 15px;
+        padding: 8px 12px;
+        border-radius: 30px;
+        background-color: rgb(239, 239, 239);
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .call-btn:hover{
+        background-color: var(--Primary);
+        color: #fff;
+    }
+    
 }
+
 
 @media(max-width: 560px){
     .header{

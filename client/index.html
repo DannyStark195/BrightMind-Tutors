@@ -19,11 +19,26 @@
             </div>
 
             <nav class="navbar">
-                <div class="cross-btn cancel-menu-popup">
+                <div class="cross-btn close-nav-btn">
                     <i class="fa-solid fa-xmark"></i>
                 </div>
-                <button class="gold signup-popup phone-active"><div></div>Get Started</button>
+                <button class="gold signup-popup phone-active gold"><div></div>Get Started</button>
                 <button class="login-popup phone-active"><div></div>Log In</button>
+
+                <div class="more-links">
+                    <a href="/become-a-tutor"><button class=""><div></div>Become a tutor</button></a>
+                    <a href="/pricing"><button class=""><div></div>See Pricing</button></a>
+                    <div class="call-container">
+                        <p>Prefer to speak with us?</p>
+                        <a href="tel:+2348092812010" class="call-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                                <div>
+                                    <p>Call Now: </p>
+                                    <p>08092812010</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </nav>
 
             <div class="nav-btn">
@@ -384,6 +399,20 @@
                     </ul>
                 </section>
 
+                <section class="become-tutor">
+                    <div class="img-box">
+                        <img src="./assets/images/istockphoto-1444192255-612x612.jpg" alt="a teacher giving lesson">
+                        <div class="overlay">
+                            <div class="content">
+                                <p class="eyebrow">Become a tutor</p>
+                                <h2>You can become a great tutor too!</h2>
+                                <p>Share your knowledge, live off your passion, and build a teaching business that works for you.</p>
+                                <button class="cta-btn gold">Find out more</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section class="cta-banner">
                     <h2>Ready to Get Started?</h2>
                     <button class="cta-btn gold">
@@ -452,19 +481,19 @@
                     </div>
                     <h2>Sign up</h2>
                     <form action="" class="signup-form">
-                        <!-- <input type="text" name="" id="signup-username" placeholder="Username" class="input-error">
-                        <p class="error-msg">The username you have entered is incorrect.</p> -->
                         <input type="email" name="" id="signup-email" placeholder="E-mail address" class="input-error">
                         <p class="error-msg">The email address you have entered is incorrect.</p>
-                        <button type="submit" class="cta-btn gold">Login</button>
+                        <input type="password" name="" id="signup-password" placeholder="Password" class="input-error">
+                        <p class="error-msg">The passwords you have entered is incorrect.</p>
+                        <button type="submit" class="cta-btn gold">Sign Up</button>
                         <div>or</div>
-                        <button>
+                        <button class="oauth-btn">
                             <div>
                                 <img src="./assets/icons/google.svg" alt="google icon">
                                 Sign up with Google
                             </div>
                         </button>
-                        <button>
+                        <button class="oauth-btn">
                             <div>
                                 <img src="./assets/icons/facebook.svg" alt="facebook icon">
                                 Sign up with Facebook
@@ -488,15 +517,17 @@
                     <form action="" class="login-form">
                         <input type="email" name="" id="login-email" placeholder="E-mail address" class="input-error">
                         <p class="error-msg">The email address you have entered is incorrect.</p>
+                        <input type="password" name="" id="signup-password" placeholder="Password" class="input-error">
+                        <p class="error-msg">The passwords you have entered is incorrect.</p>
                         <button type="submit" class="cta-btn gold">Login</button>
                         <div>or</div>
-                        <button>
+                        <button class="oauth-btn">
                             <div>
                                 <img src="./assets/icons/google.svg" alt="google icon">
                                 Log in with Google
                             </div>
                         </button>
-                        <button>
+                        <button class="oauth-btn">
                             <div>
                                 <img src="./assets/icons/facebook.svg" alt="facebook icon">
                                 Log in with Facebook
